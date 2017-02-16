@@ -1,5 +1,6 @@
 squid3
 =========
+[![Build Status](https://travis-ci.org/picturemaxx/ansible-squid3.svg?branch=master)](https://travis-ci.org/picturemaxx/ansible-squid3)
 
 Ansible role to install and configure squid3 proxy/cache in RedHat/CentOS/Debian/Ubuntu.
 
