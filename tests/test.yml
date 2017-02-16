@@ -4,4 +4,4 @@
   vars_files:
     - vars.yml
   roles:
-    - jonatasbaldin.squid3
+    - ansible-squid3
