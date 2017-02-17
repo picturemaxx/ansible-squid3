@@ -1,6 +1,10 @@
 ---
 - name: Include OS-specific variables
   include_vars: "{{ ansible_os_family }}.yml"
+  when: ansible_distribution_release != 'xenial'
+
+- include_vars: "Ubuntu1604.yml"
+  when: ansible_distribution_release == 'xenial'
 
 # Install RedHat-like
 - include: squid3-RedHat.yml

@@ -67,6 +67,10 @@ Custom http_access directives.
 `squid3_custom_refresh_pattern`     
 Custom refresh_pattern directives.
 
+`squid3_custom_diskcache`
+Custom cache_dir directives.
+
+
 Dependencies
 ------------
 

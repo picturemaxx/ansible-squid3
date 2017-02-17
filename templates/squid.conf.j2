@@ -50,7 +50,11 @@ http_access {{ http_access.perm }} {{ http_access.aclname }}
 
 http_port {{ squid3_port }}
 
-{% if squid3_diskcache %}
+{% if squid3_custom_diskcache is defined %}
+{% if squid3_custom_diskcache %}
+cache_dir {{ squid3_custom_diskcache }}
+{% endif %}
+{% elif squid3_diskcache %}
 cache_dir {{ squid3_diskcache }}
 {% endif %}
 
