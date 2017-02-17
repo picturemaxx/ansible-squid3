@@ -4,4 +4,4 @@
 
 - name: copy template
   template: src=squid.conf.j2 dest={{ squid3_conf }} owner=root group=root mode=0644
-  notify: restart squid
+  notify: restart squid3
