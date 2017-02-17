@@ -8,4 +8,8 @@
 
 # Install Debian-like
 - include: squid3-Debian.yml
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Debian' and not ansible_distribution_release == 'xenial'
+
+# Install Ubuntu 16.04
+- include: squid3-Ubuntu1604.yml
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'xenial'
