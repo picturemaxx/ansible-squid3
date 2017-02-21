@@ -92,6 +92,6 @@ MIT
 Author Information
 ------------------
 
-Jonatas Baldin      
-<mailto:jonatas.baldin@gmail.com>      
-http://deployeveryday.com
+Jonatas Baldin | <mailto:jonatas.baldin@gmail.com> | http://deployeveryday.com
+
+Hamza Tümtürk
