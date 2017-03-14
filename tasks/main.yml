@@ -13,3 +13,6 @@
 # Install Debian-like
 - include: squid3-Debian.yml
   when: ansible_os_family == 'Debian'
+
+- name: Add squid to autoboot
+  service: name={{ squid3_daemon }} state=started enabled=yes
