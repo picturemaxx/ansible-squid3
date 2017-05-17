@@ -1,81 +1,81 @@
-{% for localnet in squid3_localnets %}
+{% for localnet in squid3__localnets %}
 acl localnet src {{ localnet }}
 {% endfor %}
 
-{% if squid3_custom_localnets is defined %}
-{% for localnet in squid3_custom_localnets %}
+{% if squid3__custom_localnets is defined %}
+{% for localnet in squid3__custom_localnets %}
 acl localnet src {{ localnet }}
 {% endfor %}
 {% endif %}
 
-{% for sslports in squid3_sslports %}
+{% for sslports in squid3__sslports %}
 acl SSL_ports port {{ sslports }}
 {% endfor %}
 
-{% if squid3_custom_sslports is defined %}
-{% for sslports in squid3_custom_sslports %}
+{% if squid3__custom_sslports is defined %}
+{% for sslports in squid3__custom_sslports %}
 acl SSL_ports port {{ sslports }}
 {% endfor %}
 {% endif %}
 
-{% for safeports in squid3_safeports %}
+{% for safeports in squid3__safeports %}
 acl Safe_ports port {{ safeports }}
 {% endfor %}
 
-{% if squid3_custom_safeports is defined %}
-{% for safeports in squid3_custom_safeports %}
+{% if squid3__custom_safeports is defined %}
+{% for safeports in squid3__custom_safeports %}
 acl Safe_ports port {{ safeports }}
 {% endfor %}
 {% endif %}
 
-{% for acl in squid3_acls %}
+{% for acl in squid3__acls %}
 acl {{ acl.name }} {{ acl.type }} {{ acl.arg }}
 {% endfor %}
 
-{% if squid3_custom_acls is defined %}
-{% for acl in squid3_custom_acls %}
+{% if squid3__custom_acls is defined %}
+{% for acl in squid3__custom_acls %}
 acl {{ acl.name }} {{ acl.type }} {{ acl.arg }}
 {% endfor %}
 {% endif %}
 
-{% if squid3_custom_http_access is defined %}
-{% for http_access in squid3_custom_http_access %}
+{% if squid3__custom_http_access is defined %}
+{% for http_access in squid3__custom_http_access %}
 http_access {{ http_access.perm }} {{ http_access.aclname }}
 {% endfor %}
 {% endif %}
 
-{% for http_access in squid3_http_access %}
+{% for http_access in squid3__http_access %}
 http_access {{ http_access.perm }} {{ http_access.aclname }}
 {% endfor %}
 
-http_port {{ squid3_port }}
+http_port {{ squid3__port }}
 
-{% if squid3_custom_diskcache is defined %}
-{% if squid3_custom_diskcache %}
-cache_dir {{ squid3_custom_diskcache }}
+{% if squid3__custom_diskcache is defined %}
+{% if squid3__custom_diskcache %}
+cache_dir {{ squid3__custom_diskcache }}
 {% endif %}
-{% elif squid3_diskcache %}
-cache_dir {{ squid3_diskcache }}
+{% elif squid3__diskcache %}
+cache_dir {{ squid3__diskcache }}
 {% endif %}
 
-{% if squid3_coredumpdir %}
-coredump_dir {{ squid3_coredumpdir }}
+{% if squid3__coredumpdir %}
+coredump_dir {{ squid3__coredumpdir }}
 {% endif %} 
 
-{% for rp in squid3_refresh_pattern %}
+{% for rp in squid3__refresh_pattern %}
 refresh_pattern {{ rp.case_sensitive }} {{ rp.regex }} {{ rp.min }} {{ rp.percent }} {{ rp.max }} {{ rp.opts }}
 {% endfor %}
 
-{% if squid3_custom_refresh_pattern is defined %}
-{% for rp in squid3_custom_refresh_pattern %}
+{% if squid3__custom_refresh_pattern is defined %}
+{% for rp in squid3__custom_refresh_pattern %}
 refresh_pattern {{ rp.case_sensitive }} {{ rp.regex }} {{ rp.min }} {{ rp.percent }} {{ rp.max }} {{ rp.opts }}
 {% endfor %}
 {% endif %}
 
-{% if squid3_outgoing_adress %}
-tcp_outgoing_address {{ squid3_outgoing_address }}
+{% if squid3__outgoing_adress %}
+tcp_outgoing_address {{ squid3__outgoing_address }}
 {% endif %}
 
-{% if squid3_visible_hostname %}
-visible_hostname {{ squid3_visible_hostname }}
+{% if squid3__visible_hostname %}
+visible_hostname {{ squid3__visible_hostname }}
 {% endif %}

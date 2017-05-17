@@ -1,3 +1,5 @@
 ---
 - name: restart squid3
-  service: name={{ squid3_daemon }} state=restarted
+  service:
+    name: "{{ squid3__daemon }}"
+    state: restarted

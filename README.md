@@ -19,55 +19,58 @@ The `host_vars/group_vars` are best suited to create custom ACLs and http_access
 ### Globals
 Variables listed in `defaults/main.yml`
 
-`squid3_localnets`     
+`squid3__localnets`     
 List of internal subnets, used to create the default ACL named localnet.
 
-`squid3_sslports`     
+`squid3__sslports`     
 List of ports authorized to used the CONNECT methhod, encrypted traffic.
 
-`squid3_safeports`     
+`squid3__safeports`     
 List of ports authorized to use HTTP in plain text.
 
-`squid3_port`     
+`squid3__port`     
 Port that squid3 daemon runs.
 
-`squid3_outgoing_adress`     
+`squid3__outgoing_adress`     
 If specified, tells which IP address to direct the traffic.
 
-`squid3_visible_hostname`
+`squid3__visible_hostname`
 Visible proxy name. Appears in authentication dialog.
 
-`squid3_acls`     
+`squid3__acls`     
 ACLs from default squid.conf. Can be used to create custom ACLs.
 
-`squid3_http_access`     
+`squid3__http_access`     
 http_access directives from default squid.conf. Can be used to create custom http_access.
 
-`squid3_refresh_pattern`     
+`squid3__refresh_pattern`     
 List of refresh_paterrn from defalt squid.conf. Can be used to create custom refresh_pattern.
+
+`squid3__logrotate_rotate`
+Sets the number of saved rotated logfiles. Default to 7
 
 ### Custom
 Custom variables. Can be used in `defaults/main.yml`, but it was made to best if in `host_vars` and `group_vars`.
 
-`squid3_custom_localnets`     
+`squid3__custom_localnets`     
 Custom localnets.
 
-`squid3_custom_sslports`     
+`squid3__custom_sslports`     
 Custom SSL ports.
 
-`squid3_custom_safeports`     
+`squid3__custom_safeports`     
 Custom HTTP ports.
 
-`squid3_custom_acls`     
+`squid3__custom_acls`     
 Custom ACLs.
 
-`squid3_custom_http_access`     
+`squid3__custom_http_access`     
 Custom http_access directives.
 
-`squid3_custom_refresh_pattern`     
+`squid3__custom_refresh_pattern`     
 Custom refresh_pattern directives.
 
-`squid3_custom_diskcache`
+`squid3__custom_diskcache`
 Custom cache_dir directives.
 
 
@@ -95,3 +98,5 @@ Author Information
 Jonatas Baldin | <mailto:jonatas.baldin@gmail.com> | http://deployeveryday.com
 
 Hamza Tümtürk
+
+[Tobias Kramheller](https://github.com/tkramheller)

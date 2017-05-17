@@ -14,5 +14,16 @@
 - include: squid3-Debian.yml
   when: ansible_os_family == 'Debian'
 
+- name: Copy logrotate config for squid3
+  template:
+    src: etc/logrotate.d/squid.j2
+    dest: /etc/logrotate.d/squid
+    owner: root
+    group: root
+    mode: 0644
+
 - name: Add squid to autoboot
-  service: name={{ squid3_daemon }} state=started enabled=yes
+  service:
+    name: "{{ squid3__daemon }}"
+    state: started
+    enabled: yes
