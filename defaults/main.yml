@@ -1,22 +1,22 @@
 ---
 # To add localnets, sslports, safeports, acls, httpa_ccess and refresh_patterns
 # to specif hosts, use host_vars/ or group_vars with this variables:
-# squid3_custom_localnets
-# squid3_custom_sslports
-# squid3_custom_safeports
-# squid3_custom_acls
-# squid3_custom_http_access
-# squid3_custom_refresh_pattern
-# squid3_custom_diskcache
+# squid3__custom_localnets
+# squid3__custom_sslports
+# squid3__custom_safeports
+# squid3__custom_acls
+# squid3__custom_http_access
+# squid3__custom_refresh_pattern
+# squid3__custom_diskcache
 
 # local subnets
-squid3_localnets:
+squid3__localnets:
   - 10.0.0.0/8
 
-squid3_sslports:
+squid3__sslports:
   - 443
 
-squid3_safeports:
+squid3__safeports:
   - "80		    # http"
   - "21		    # ftp"
   - "443		# https"
@@ -28,16 +28,16 @@ squid3_safeports:
   - "591		# filemaker"
   - "777		# multiling http"
 
-squid3_port: 3128
-squid3_outgoing_adress: ''
-squid3_visible_hostname: 'proxy.example.com'
+squid3__port: 3128
+squid3__outgoing_adress: ''
+squid3__visible_hostname: 'proxy.example.com'
 
-squid3_acls:
+squid3__acls:
   ### default ###
   - { name: 'CONNECT', type: 'method', arg: 'CONNECT' }
   ### default ###
 
-squid3_http_access:
+squid3__http_access:
   ### default ###
   - { perm: 'deny', aclname: '!Safe_ports' }
   - { perm: 'deny', aclname: 'CONNECT !SSL_ports' }
@@ -48,7 +48,7 @@ squid3_http_access:
   - { perm: 'deny', aclname: 'all' }
   ### default ###
 
-squid3_refresh_pattern:
+squid3__refresh_pattern:
   ### default ###
   - { case_sensitive: '', regex: '^ftp:', min: '1440', percent: '20%', max: '10080', opts: '' }
   - { case_sensitive: '', regex: '^gopher:', min: '1440', percent: '10%', max: '1440', opts: '' }
