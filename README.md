@@ -99,4 +99,4 @@ Jonatas Baldin | <mailto:jonatas.baldin@gmail.com> | http://deployeveryday.com
 
 Hamza Tümtürk
 
-Tobias Kramheller
+[Tobias Kramheller](https://github.com/tkramheller)

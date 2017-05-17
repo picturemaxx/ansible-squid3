@@ -14,7 +14,7 @@
 - include: squid3-Debian.yml
   when: ansible_os_family == 'Debian'
 
-- name: Copy logrotate for squid3
+- name: Copy logrotate config for squid3
   template:
     src: etc/logrotate.d/squid.j2
     dest: /etc/logrotate.d/squid
