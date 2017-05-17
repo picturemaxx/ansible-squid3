@@ -46,6 +46,9 @@ http_access directives from default squid.conf. Can be used to create custom htt
 `squid3__refresh_pattern`     
 List of refresh_paterrn from defalt squid.conf. Can be used to create custom refresh_pattern.
 
+`squid3__logrotate_rotate`
+Sets the number of saved rotated logfiles. Default to 7
+
 ### Custom
 Custom variables. Can be used in `defaults/main.yml`, but it was made to best if in `host_vars` and `group_vars`.
 

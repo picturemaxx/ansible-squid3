@@ -55,3 +55,5 @@ squid3__refresh_pattern:
   - { case_sensitive: '-i', regex: '(/cgi-bin/|\?):', min: '0', percent: '0%', max: '0', opts: '' }
   - { case_sensitive: '', regex: '.', min: '0', percent: '20%', max: '4320', opts: '' }
   ### default ###
+
+squid3__logrotate_rotate: 7
