@@ -17,7 +17,6 @@ squid3__sslports:
   - 443
 
 squid3__safeports:
-  - "80		    # http"
   - "21		    # ftp"
   - "443		# https"
   - "70		    # gopher"
@@ -30,7 +29,6 @@ squid3__safeports:
 
 squid3__port: 3128
 squid3__outgoing_adress: ''
-squid3__visible_hostname: 'proxy.example.com'
 
 squid3__acls:
   ### default ###
