@@ -76,6 +76,4 @@ refresh_pattern {{ rp.case_sensitive }} {{ rp.regex }} {{ rp.min }} {{ rp.percen
 tcp_outgoing_address {{ squid3__outgoing_address }}
 {% endif %}
 
-{% if squid3__visible_hostname %}
-visible_hostname {{ squid3__visible_hostname }}
-{% endif %}
+visible_hostname {{ ansible_hostname }}

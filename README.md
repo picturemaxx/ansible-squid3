@@ -34,9 +34,6 @@ Port that squid3 daemon runs.
 `squid3__outgoing_adress`     
 If specified, tells which IP address to direct the traffic.
 
-`squid3__visible_hostname`
-Visible proxy name. Appears in authentication dialog.
-
 `squid3__acls`     
 ACLs from default squid.conf. Can be used to create custom ACLs.
 
