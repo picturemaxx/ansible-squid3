@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+v1.3.0:
+
+* f7e1c9b: change visible_hostname to ansible_hostname
+
 v1.2.0:
 
 * 8cca73d: update readme. rename logrotate task
